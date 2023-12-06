@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html land="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=900, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <title>WORKING_TITLE 0.0.1</title>
+    </head>
+
+    <body onload="revealChecker();">
+        <div id="wrapper">
+
+            <div id="titlebar">
+                <h3><a href="https://clay-share.glitch.me/">Home</a></h3>
+            </div>
+
+            <div id="sectionLeft" class="logGradient">
+              <p id="line0"></p>
+              <p id="line1"></p>
+              <p id="line2"></p>
+              <p id="line3"></p>
+              <p id="line4"></p>
+            </div>
+
+            <div id="sectionMain">
+                <p id="clayGathered">0 clay gathered</p>
+                <button onclick="getClay();">Gather clay</button>
+                <br>
+
+                <br>
+                <div id="hideWater">
+                    <p>A small stream, alive with clear, bright water.</p>
+                    <p id="waterCollected">0 units of water collected</p>
+                    <button onclick="getWater();">Collect water</button>
+                </div>
+
+                <br>
+                <div id="hideCeramic">
+                    <p>Tougher than dough, softer than flesh. <i>10 clay, 20 water</i></p>
+                    <p id="ceramicMade">0 handfuls of ceramic</p>
+                    <button onclick="getCeramic();">Craft ceramic</button>
+
+                    <p id="plateMade">0 earthenware plates, small</p>
+                    <p>
+                        <button onclick="getPlate();hideErrors();revealShop1();revealShop2();">Craft a small plate</button>
+                    </p>
+                </div>
+                <div id = "hideBowl">
+                  <p id="bowlMade">0 round bowls</p>
+                  <p>
+                        <button onclick="getBowl();hideErrors();">Craft a bowl</button>
+                  </p>
+                  
+                </div>
+
+                <div id="plateFailMsg">
+                    <p>Fumbled, but tossing it into the river brings some catharsis.</p>
+                </div>
+            </div>
+
+            <div id="sectionRight">
+                <div id="hideShop1" class="box">
+                    <p>You keep your wares on the windowsill. They have garnered local interest.</p>
+                    +1 coin <button onclick="sellWares('plates');">Sell</button> 1 small plate
+                    <p id="coins">Coins: 0</p>
+                </div>
+
+                <div id="hideShop2" class="box">
+                    <p>The carpenter informs you of a weekly market in the town square.</p>
+                    -10 coin <input onclick="getShovel();" type="button" value="Buy" id="shovelButton"> A small shovel</input> 
+                    <p id="gotShovel"></p>
+              -20 coin <input onclick="getPail();" type="button" value="Buy" id="pailButton"> A sturdy water pail</input>
+                    <p id="gotPail"></p>
+                    <p></p>
+                </div>
+            </div>
+
+        </div>
+        <script src="main.js" charset="utf-8" type="text/javascript"></script>
+    </body>
+
+</html>
