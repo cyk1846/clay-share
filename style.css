@@ -1,0 +1,106 @@
+html,body
+{
+	width: 100%;
+	height: 100%;
+}
+
+.box {
+	display: inline-block;
+    position: relative;
+    margin: 1%;
+    float: right;
+	padding: 10px;
+	border: 5px solid black;
+	margin: 1;
+}
+
+#wrapper
+{
+	width:100%;
+	height:100%;
+	position:absolute;
+	left:0px;
+	top:0px;
+	right:0px;
+	bottom:0px;
+	/*min-width:1280px;*/
+	transform-origin:0 0;
+}
+
+#titlebar
+{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 50px;
+	font-family: Courier New;
+	background-color: black;
+	color: white;
+	padding-left: 10px;
+}
+
+#titlebar a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+#game
+{
+	position: absolute;
+	left: 0px;
+	top: 50px;
+	right: 0px;
+	bottom: 0px;
+	overflow: hidden;
+}
+/*.onWeb #game{top:32px;}
+.offWeb #game{top:0px;}*/
+
+.logGradient:before {
+  content:'';
+  width:100%;
+  height:100%;    
+  position:absolute;
+  left:0;
+  top:0;
+  background:linear-gradient(transparent 100px, white);
+}
+
+#sectionLeft
+{
+	position:absolute;
+	left: 10px;
+	top: 50px;
+	bottom: 0px;
+	width: 8%;
+  overflow: hidden;
+}
+
+
+#sectionMain{
+	position: absolute;
+	left: 10%;
+	padding-left: 10px;
+	margin-right: 15px;
+	top: 50px;
+	bottom: 0px;
+	width: 40%;
+	overflow: hidden;
+}
+
+#sectionRight
+{
+	height: 100%;
+	position: absolute;
+	top: 50px;
+	right: 0px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	border-left: solid;
+	width: 45%;
+	max-width: 420px;
+	overflow: hidden;
+
+}
+
