@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=900, initial-scale=1">
         <link rel="stylesheet" href="style.css">
-        <title>WORKING_TITLE 0.0.1</title>
+        <title>WORKING_TITLE 0.0.5.2</title>
     </head>
 
     <body onload="revealChecker();">
@@ -20,38 +20,55 @@
               <p id="line2"></p>
               <p id="line3"></p>
               <p id="line4"></p>
+              <p id="line5"></p>
+              <p id="line6"></p>
+              <p id="line7"></p>
+              <p id="line8"></p>
             </div>
 
             <div id="sectionMain">
+                <p><u>The Riverbed</u></p>
                 <p id="clayGathered">0 clay gathered</p>
                 <button onclick="getClay();">Gather clay</button>
-                <br>
 
                 <br>
                 <div id="hideWater">
-                    <p>A small stream, alive with clear, bright water.</p>
                     <p id="waterCollected">0 units of water collected</p>
                     <button onclick="getWater();">Collect water</button>
                 </div>
 
                 <br>
+                <br>
                 <div id="hideCeramic">
-                    <p>Tougher than dough, softer than flesh. <i>10 clay, 20 water</i></p>
-                    <p id="ceramicMade">0 handfuls of ceramic</p>
-                    <button onclick="getCeramic();">Craft ceramic</button>
-
-                    <p id="plateMade">0 earthenware plates, small</p>
+                    <p><u>Cellar</u></p>
+                    <p id="ceramicMade">0 ceramic</p>
+                    <button onclick="getCeramic();">Craft ceramic</button><i> 10 clay, 20 water</i>
+                </div>
+              
+                <br>
+                <br>
+                <div id = "hidePlate">
+                  <p><u>Workstation</u></p>
+                  <p id="plateMade">0 earthenware plates. </p>
                     <p>
-                        <button onclick="getPlate();hideErrors();revealShop1();revealShop2();">Craft a small plate</button>
+                        <button onclick="getPlate();hideErrors();">Craft a small plate</button><i> 1 ceramic</i>
                     </p>
-                </div>
-                <div id = "hideBowl">
-                  <p id="bowlMade">0 round bowls</p>
+              </div>
+              <div id = "hideBowl">
+                <p id="bowlMade">0 round bowls. </p>
+                <p>
+                      <button onclick="getBowl();hideErrors();">Craft a bowl</button><i> 2 ceramic</i>
+                </p>
+
+              </div>
+              <div id = "hideTeapot">
+                  <p id="teapotMade">0 round bowls. </p>
                   <p>
-                        <button onclick="getBowl();hideErrors();">Craft a bowl</button>
+                        <button onclick="getTeapot();hideErrors();">Craft a teapot</button><i> 5 ceramic</i>
                   </p>
-                  
-                </div>
+
+              </div>
+              
 
                 <div id="plateFailMsg">
                     <p>Fumbled, but tossing it into the river brings some catharsis.</p>
@@ -62,15 +79,19 @@
                 <div id="hideShop1" class="box">
                     <p>You keep your wares on the windowsill. They have garnered local interest.</p>
                     +1 coin <button onclick="sellWares('plates');">Sell</button> 1 small plate
+                  <br>
+                    +4 coin <button onclick="sellWares('bowls');">Sell</button> 1 bowl
                     <p id="coins">Coins: 0</p>
+                  <br>
+                    +10 coin <button onclick="sellWares('teapots');">Sell</button> 1 teapot
                 </div>
 
                 <div id="hideShop2" class="box">
                     <p>The carpenter informs you of a weekly market in the town square.</p>
                     -10 coin <input onclick="getShovel();" type="button" value="Buy" id="shovelButton"> A small shovel</input> 
-                    <p id="gotShovel"></p>
-              -20 coin <input onclick="getPail();" type="button" value="Buy" id="pailButton"> A sturdy water pail</input>
-                    <p id="gotPail"></p>
+                    <p id="shovelGet"></p>
+                    -20 coin <input onclick="getPail();" type="button" value="Buy" id="pailButton"> A sturdy water pail</input>
+                    <p id="pailGet"></p>
                     <p></p>
                 </div>
             </div>
